@@ -1,0 +1,32 @@
+package com.profconsult.administration.entity;
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "_item")
+public class Project {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String title;
+    private String topic;
+    @Lob
+    private byte[] image;
+    private String fileName;
+    private String fileType;
+     public Project(String fileName, String fileType, byte[] image) {
+         this.fileName = fileName;
+         this.fileType = fileType;
+         this.image = image;
+     }
+}

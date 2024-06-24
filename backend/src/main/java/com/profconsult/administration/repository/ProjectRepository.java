@@ -1,9 +1,9 @@
 package com.profconsult.administration.repository;
 
-import com.profconsult.administration.entity.Item;
+import com.profconsult.administration.entity.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ItemRepository extends JpaRepository<Item, Integer> {
+public interface ProjectRepository extends JpaRepository<Project, Integer> {
 }

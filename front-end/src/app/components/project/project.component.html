@@ -57,8 +57,8 @@
 
 
 
-             <!-- Nav Item - Project -->
-             <li class="nav-item">
+            <!-- Nav Item - Project -->
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/project">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Project</span></a>
@@ -71,8 +71,8 @@
                     <span>Gallery</span></a>
             </li>
 
-              <!-- Nav Item - Partner -->
-              <li class="nav-item">
+            <!-- Nav Item - Partner -->
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/partner">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Partner</span></a>
@@ -191,25 +191,25 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Tilile</th>
+                                            <th>Title</th>
                                             <th>Image</th>
-                                            <th>Tipic</th>
+                                            <th>Topic</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Tilile</th>
+                                            <th>Title</th>
                                             <th>Image</th>
-                                            <th>Tipic</th>
+                                            <th>Topic</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
+                                        <tr *ngFor="let p of projects">
+                                            <td>{{p.title}}</td>
+                                            <td>{{p.fileName}}</td>
+                                            <td>{{p.topic}}</td>
                                             <td>
                                                 <a data-bs-toggle="tooltip" data-bs-title="View details"
                                                     data-bs-placement="top" class="btn btn-primary btn-sm"
@@ -226,167 +226,6 @@
                                                 </button>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>San Francisco</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>Tokyo</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Colleen Hurst</td>
-                                            <td>Javascript Developer</td>
-                                            <td>San Francisco</td>
-                                            <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
-                                                    data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
-                                                    edit
-                                                </a>
-                                                <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-
                                     </tbody>
                                 </table>
                             </div>
