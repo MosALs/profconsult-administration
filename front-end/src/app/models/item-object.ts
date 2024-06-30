@@ -1,19 +1,22 @@
 export interface ItemObject{
+    id:any;
     titleEn:any;
     topicEn:any;
     titleAr:any;
     topicAr:any;
-    file:File;
+    image:File;
     fileName:any;
 } 
 
 export interface Partner{
-    file:File;
+    id:any;
+    image:File;
     fileName:any;
 }
 
 export interface Gallery{
-    file:File;
+    id:any;
+    image:File;
     fileName:any;
 }
 

@@ -1,0 +1,29 @@
+<!-- <p>edit-gallery works!</p> -->
+<!--  Gallery -->
+<mat-dialog-content>
+    <p>Edit Gallery</p>
+    <!-- <mat-form-field> -->
+    <div class="col-xl-12 col-lg-12">
+        <div class="card shadow mb-4">
+            <!-- Card Body -->
+            <div class="card-body">
+                <form #galleryeditForm="ngForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="formFileMultiple" class="form-label">Files input image or video</label>
+                            <input class="form-control" ngModel name="fileName" (change)="onFileChange($event)"
+                                type="file" id="formFileMultiple" multiple />
+                        </div>
+                    </div>
+
+                    <button (click)="submitGallery(galleryeditForm)" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- </mat-form-field>1 -->
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <!-- <button mat-button [mat-dialog-close]="animal()" cdkFocusInitial>Ok</button> -->
+</mat-dialog-actions>

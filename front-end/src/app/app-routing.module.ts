@@ -6,6 +6,8 @@ import { ProjectComponent } from './components/project/project.component';
 import { PartnerComponent } from './components/partner/partner.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { WebpageComponent } from './components/webpage/webpage.component';
+import { HomeComponent } from './components/home/home.component';
+import { HomearComponent } from './components/homear/homear.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch:'full'},
@@ -14,7 +16,8 @@ const routes: Routes = [
   {path: 'project',component:ProjectComponent},
   {path: 'partner',component:PartnerComponent},
   {path: 'gallery',component:GalleryComponent},
-  {path: 'home',component:WebpageComponent}
+  {path: 'home-en',component:HomeComponent},
+  {path: 'home-ar',component:HomearComponent}
 ];
 
 

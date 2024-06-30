@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prof Consult</title>
+    <link href="/assets/webpage/images/favicon.png" rel="icon">
+    <link rel="stylesheet" href="/assets/webpage/icss/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/all.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/animate.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/tooltipster.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/cubeportfolio.min.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/revolution/navigation.css">
+    <link rel="stylesheet" href="/assets/webpage/icss/revolution/settings.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&amp;display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="75" class="offset-nav">
+    <!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+    <!-- header -->
+    <header class="site-header" id="header">
+        <nav class="navbar navbar-expand-lg transparent-bg static-nav">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/webpage/images/logo-transparent.png" alt="logo" class="logo-default">
+                    <img src="/assets/webpage/images/logo.png" alt="logo" class="logo-scrolled">
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link active pagescroll" href="#home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#about">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#services">خدماتنا</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#projects">مشاريعنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#gallery">معرض الصور</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#partners">شركائنا</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#contact">تواصل معنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/en">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--side menu open button-->
+            <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+                <span></span> <span></span> <span></span>
+            </a>
+        </nav>
+        <!-- side menu -->
+        <div class="side-menu opacity-0 gradient-bg">
+            <div class="overlay"></div>
+            <div class="inner-wrapper">
+                <span class="btn-close btn-close-no-padding" id="btn_sideNavClose"><i></i><i></i></span>
+                <nav class="side-nav w-100">
+                    <ul class="navbar-nav">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link pagescroll" href="#home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#about">نبذه عنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#projects">مشاريعنا</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#gallery">معرض الصور</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#partners">شركائنا</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link pagescroll" href="#contact">تواصل معنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/en">English</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="side-footer w-100">
+                    <ul class="social-icons-simple white top40">
+                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+                    </ul>
+                    <p class="whitecolor">&copy; <span id="year"></span> المستشار المحترف</p>
+                </div>
+            </div>
+        </div>
+        <div id="close_side_menu" class="tooltip"></div>
+        <!-- End side menu -->
+    </header>
+    <!-- header -->
+    <!--Main Slider-->
+    <section id="home" class="ltr">
+        <h2 class="d-none">heading</h2>
+        <div id="revo_main_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
+            <div id="rev_one_page" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+                <ul>
+                    <!-- SLIDE  -->
+                    <li data-index="rs-01" data-transition="fade" data-slotamount="default"
+                        data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="2000"
+                        data-fsmasterspeed="1500" class="banner-overlay">
+                        <!-- MAIN IMAGE -->
+                        <div class="overlay overlay-dark opacity-6"></div>
+                        <img src="/assets/webpage/images/home/banner-single-1.jpg" alt=""
+                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                            class="rev-slidebg" data-bgparallax="10" data-no-retina>
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption tp-resizeme z-index-1 font-light2 text-capitalize whitecolor"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-100','-100','-140','-140']"
+                            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+                            data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
+                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000"
+                            data-splitin="none" data-splitout="none">الريبروف كونسلت
+                        </div>
+                        <div class="tp-caption tp-resizeme font-bold z-index-2 text-capitalize whitecolor"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-70','-70']"
+                            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200"
+                            data-splitin="none" data-splitout="none">مفاهيم إحترافية
+                        </div>
+                        <div class="tp-caption tp-resizeme z-index-3 font-xlight whitecolor text-capitalize"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['40','40','0','0']"
+                            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                            data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000"
+                            data-splitin="none" data-splitout="none">للاستشارات الهندسية
+                        </div>
+                        <div class="tp-caption" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['120','120','100','100']"
+                            data-textalign="['center','center','center','center']" data-whitespace="nowrap"
+                            data-transform_idle="o:1;"
+                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+                            data-transform_out="s:900;e:Power2.easeInOut;s:900;e:Power2.easeInOut;"
+                            data-frames='[{"delay":700,"speed":2000,"frame":"0","from":"sX:1;sY:1;opacity:0;fb:40px;","to":"o:1;fb:0;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;"}]'>
+                            <a href="#about" class="button btn-primary font-13">اقرأ المزيد</a>
+                        </div>
+                    </li>
+                    <!-- SLIDE 2  -->
+                    <li data-index="rs-02" data-transition="fade" data-slotamount="default"
+                        data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="2000"
+                        data-fsmasterspeed="1500" class="banner-overlay">
+                        <!-- MAIN IMAGE -->
+                        <div class="overlay overlay-dark opacity-6"></div>
+                        <img src="/assets/webpage/images/home/banner-single-2.jpg" alt=""
+                            data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                            class="rev-slidebg" data-bgparallax="10" data-no-retina>
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption tp-resizeme z-index-5 font-xlight whitecolor text-capitalize"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-80','-80','-60','-60']"
+                            data-fontsize="['32','32','30','28']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+                            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200"
+                            data-splitin="none" data-splitout="none" style="letter-spacing: 1px;">بروف كونسلت
+                        </div>
+                        <div class="tp-caption tp-resizeme z-index-6 font-normal whitecolor text-capitalize"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['-20','-20','-10','-10']"
+                            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                            data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000"
+                            data-splitin="none" data-splitout="none">مفاهيم إحترافية
+                        </div>
+                        <div class="tp-caption tp-resizeme z-index-7 font-bold whitecolor text-capitalize"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['45','45','50','50']"
+                            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+                            data-width="['none','none','none','none']" data-type="text"
+                            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+                            data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500"
+                            data-splitin="none" data-splitout="none" style="line-height:30px">للاستشارات الهندسية
+                        </div>
+                        <div class="tp-caption" data-x="['center','center','center','center']"
+                            data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                            data-voffset="['120','120','120','120']"
+                            data-textalign="['center','center','center','center']" data-whitespace="nowrap"
+                            data-transform_idle="o:1;"
+                            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+                            data-transform_out="s:900;e:Power2.easeInOut;s:900;e:Power2.easeInOut;" data-type="button"
+                            data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                            <a href="#contact" class="button btn-primary font-13 mr-2">تواصل معنا</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Main Slider ends -->
+    <!--Some Feature -->
+    <section id="about" class="single-feature padding">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-7 col-md-8 col-sm-8 text-sm-start text-center wow fadeInLeft" data-wow-delay="300ms">
+                    <div class="heading-title mb-4 text-start">
+                        <h2 class="darkcolor font-normal bottom30"><span class="defaultcolor">المستشار المحترف </span>
+                        </h2>
+                    </div>
+                    <p class="bottom35 text-start">نؤمن أن الهندسة علمٌ تقوم عليه المجتمعات وتبنى عليه الحضارات وهو أساس
+                        العمران فمن هذا المنطلق نسعى بأن نكون دائماً أحد الركائز الأساسية في تقديم الخدمات الهندسية على
+                        نطاق واسع في مجال عملنا، ترتكز جهودنا حول إضفاء قيمة مضافة ومستدامة عن طريق تنفيذ الأعمال من
+                        خلال فريق عمل متكامل يضم نخبة محترفة للتواصل مع عملائنا من أجل خلق التميز والأبتكار والألهام وفي
+                        الوقت ذاته فاننا نفهم ونحترم البيئة التي نحيا ونعمل ونتعايش في جنباتها. </p>
+                    <p class="bottom35 text-start">أننا نتطلع أن نكون جزءمن طموح حكومتنا الرشيدة وقيادتها الحكيمة في
+                        السعي لتحقيق رؤية المملكة العربية السعودية 2030 م
+
+                        وطوال السنوات الماضية اكتسبنا الخبرة السريعة من خلال المشاريع المتنوعة. ونحن ملتزمون بالحفاظ على
+                        النمو وتوطيد العلاقة بعملائنا في الأجل القصير والطويل، ومنذ نشأتنا في عام 2012م، بروف كونسلت
+                        وضعت رؤية طويلة الأجل، والتوقع للنمو المحتمل في هذا القطاع، وبناءً على ذلك، فقد تعهدنا أن يكون
+                        لنا الدور الرائد بين رواد هذا القطاع الواعد.
+                    </p>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-md-4 col-sm-4 wow fadeInRight" data-wow-delay="300ms">
+
+                    <div style="background-image: url(&quot;/assets/webpage/images/zoom-count-bg.jpg&quot;); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
+                        class="zoom-counter__card">
+                        <div class="zoom-counter__card-title">
+                            <p>بدمعكم من</p>
+                            <p>2012</p>
+                        </div>
+                        <div data-counter-value="25" class="zoom-counter__card-value js-counter animated">13</div>
+                        <div class="zoom-counter__card-description">عام<br>من الخبرة في خدمتكم</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Some Feature ends-->
+
+
+    <section class="single-feature">
+        <div class="container">
+            <div class="cards">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="cards__item col-12 col-md-6 col-xl-3"><a
+                                style="background-image: url('/assets/webpage/images/card-image-1.jpg')" href="#"
+                                class="cards__item-inner"><span class="cards__item-content"><span
+                                        class="cards__item-title">رؤيتنا</span><span class="cards__item-text">الريادة في
+                                        تقديم الخدمات الهندسية بمعايير عالمية.</span>
+                                    <span class="cards__arrow">01</span></span></a></div>
+
+                        <div class="cards__item col-12 col-md-6 col-xl-3"><a
+                                style="background-image: url('/assets/webpage/images/card-image-2.jpg')" href="#"
+                                class="cards__item-inner"><span class="cards__item-content"><span
+                                        class="cards__item-title"> رسالتنا</span><span class="cards__item-text">مفاهيم
+                                        إحترافية للاستشارات الهندسية.</span><span
+                                        class="cards__arrow">02</span></span></a></div>
+
+                        <div class="cards__item col-12 col-md-12 col-xl-6"><a
+                                style="background-image: url('/assets/webpage/images/card-image-3.jpg')" href="#"
+                                class="cards__item-inner"><span class="cards__item-content"><span
+                                        class="cards__item-title">أهدافنا</span><span class="cards__item-text">تقديم
+                                        خدمات هندسية متميزة موثوقة لكسب ثقة عملائنا وموظفينا ومجتمعنا من خلال أداء مميز
+                                        لمنشأة قادرة على التطور والنمو والأبداع والابتكار.</span><span
+                                        class="cards__arrow">03</span></span></a></div>
+
+
+
+                        <div class="cards__item col-12 col-md-12 col-xl-12"><a
+                                style="background-image: url('/assets/webpage/images/banner1-1.jpg')" href="#"
+                                class="cards__item-inner"><span class="cards__item-content"><span
+                                        class="cards__item-title">قيمنا</span><span class="cards__item-text">
+
+                                        <ul class="rounded heading_space text-start">
+                                            <li> المصداقية في علاقتنا مع جميع شركائنا.</li>
+                                            <li> نتعاون ونتواصل مع بعضنا البعض على جميع المستويات ومع شركائنا لتحقيق
+                                                النجاح والتميز.</li>
+                                            <li> نعتني دائماً بموظفينا وشركائنا ومجتمعنا وبيئتنا. </li>
+                                            <li> نشجع القيادة والابتكار والابداع والتطوير والمبادرة في تبني الأفكار
+                                                للوصول إلى التطوير المستمر في جميع خدماتنا.</li>
+                                            <li> نسعى للتفوق والوفاء بوعودنا بل نتخطاها.</li>
+                                        </ul>
+
+
+
+                                    </span><span class="cards__arrow">04</span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <section id="services" class="padding bglight">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30"><span class="defaultcolor">خدماتنا</span> </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="mb-0">لمواكبة احتياجات عملائنا فقد حرصنا ان نقدم خدماتنا بشمولية</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col-md-6 col-sm-12 text-center">
+
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> أعمال التصاميم</h3>
+
+
+                            <ul class="pricing-list">
+                                <li> تصاميم البنية التحتية: الطرق/أعمال المياه/الصرف الصحي/السيول/الري/الشبكات
+                                    الكهربائية /شبكات الاتصالات</li>
+                                <li> التصاميم المعمارية. </li>
+                                <li> التصاميم الكتروميكانيك: تصميم الأعمال الكهربائية وتغذية المياه والصرف/أنظمة الإنذار
+                                    والإطفاء والسلامة/أنظمة المراقبة والأمن/التكييف.</li>
+                                <li> التصاميم الإنشائية: الخرسانية/الهياكل الحديدية. </li>
+                                <li> التصاميم الداخلية.</li>
+                                <li> تصميم تنسيق المواقع.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> التثمين</h3>
+                            <p>دراسة وتقييم الهياكل للمنشآت.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> إعداد مواصفات المشاريع وجداول الكميات.</h3>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-12 text-center">
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> الدراسات</h3>
+
+
+                            <ul class="pricing-list">
+                                <li> الدراسات المرورية والنقل.</li>
+                                <li> الدراسات الاجتماعية والاقتصادية وتحليل اثارها.</li>
+                                <li> الدراسات العمرانية.</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> أعمال المساحة والتبتير</h3>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> المختبرات </h3>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> العمارة والتخطيط </h3>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> أعمال الإشراف على المشاريع</h3>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-12 text-center">
+
+
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> الاستشارات الاقتصادية والبيئية</h3>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> أنظمة المعلومات الجغرافية (GIS) </h3>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> إدارة المشاريع</h3>
+                            <p>الإشراف والمتابعة وإدارة الموقع والدعم الفني.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+                            <h3 class="font-light darkcolor"> التحكيم في الخلافات الهندسية</h3>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Certificates -->
+    <section class="padding bg-counters parallax">
+        <div class="container">
+            <div class="col-md-12 col-sm-12 text-center">
+                <div class="heading-title darkcolor wow fadeInUp bottom60" data-wow-delay="300ms">
+
+                    <h3 class=" bottom30 whitecolor">نحن نقدم الخدمات بطرق احترافية معتمدة ةعليه حصلنا على شهادات الايزو
+                        IOS</h3>
+                    <!--<span class="whitecolor">نحن نقدم الخدمات بطرق احترافية معتمدة.</span>-->
+                </div>
+            </div>
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="flix-left"><img src="/assets/webpage/images/iso1.png" alt="">
+                        <div class="whitecolor padding_left">
+                            <h3>IOS 9001:2015</h3>
+
+                            <p class="whitecolor top20 bottom20 font-light title">المواصفة القياسية الدولية تحدد متطلبات
+                                نظام إدارة الجودة. </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="flix-left"><img src="/assets/webpage/images/iso2.png" alt="">
+                        <div class="whitecolor padding_left">
+                            <h3>IOS 45001:2018</h3>
+
+                            <p class="whitecolor top20 bottom20 font-light title">المواصفة القياسية الدولية تحدد متطلبات
+                                نظام إدارة الصحة والسلامة المهنية (OH&S) </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Certificates ends-->
+
+    <!--Projects-->
+    <section id="projects" class="padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30"> <span class="defaultcolor">مشاريعنا</span> </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <!--<p class="mb-0">لمواكبة احتياجات العملاء ، نحن ملتزمون بتقديم خدماتنا بشكل شامل.</p>-->
+                    </div>
+                </div>
+            </div>
+            <!-- Multiple Pop Up -->
+            <div class="multiplePopUp top-bot-pad">
+                <div class="row equal-shadow-team">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4" *ngFor="let item of items; let i = index">
+                        <div class="mypop">
+                            <div class="staticBox">
+                                <div class="popClick" (click)="showPopup(i)">
+                                    <div class="team-box">
+                                        <div class="image">
+                                            <img [src]="item.image" alt="">
+                                        </div>
+                                        <div class="team-content">
+                                            <h4 class="darkcolor">{{ item.titleAr }}</h4>
+                                            <ul class="social-icons-simple">
+                                                <li>{{ item.amount }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="popupBox" [ngClass]="{'myshowPop': isPopupVisible[i]}">
+                                    <div class="back" (click)="hidePopup(i)"></div>
+                                    <div class="popConte">
+                                        <span (click)="hidePopup(i)">Close</span>
+                                        <h5>{{ item.titleAr }}</h5>
+                                        <!-- <p class="p-a">Project Amount: ( {{ item.amount }} ) SR</p> -->
+                                        <p>{{item.topicAr}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <!--Projects end-->
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="position-relative padding  bglight">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30">معرض <span class="defaultcolor">الصور</span> </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="mb-0">لمواكبة احتياجات العملاء ، نحن ملتزمون بتقديم خدماتنا بشكل .
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="grid-mosaic" class="cbp-l-grid-mosaic-flat" *ngFor="let g of galleries">
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4">
+                            <div class="mypop">
+                                <div class="staticBox">
+                                    <div>
+                                        <div class="team-box">
+                                            <div class="image">
+                                                <img [src]="g.image" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="image">
+                            <img [src]="g.image" alt="image">
+                            <div class="gallery-hvr whitecolor">
+                                <div class="center-box">
+                                    <a [href]="g.image" class="opens" data-fancybox="gallery" title="Zoom In"> <i
+                                            class="fa fa-search-plus"></i></a>
+
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery ends -->
+
+    <!-- Social Responsibility -->
+    <section id="gallery" class="position-relative padding  bglight">
+        <div class="container">
+
+            <div class="row">
+
+
+
+                <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30">المسؤولية <span
+                                class="defaultcolor">الاجتماعية</span> </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="mb-0">انطلاقا من المسؤولية الاجتماعية فإننا في المستشار المحترف نستشعر أهمية هذه
+                            المسؤولية من أكثر من جانب ونوليها اهتمامنا، حيث نقوم بعمل بعض الأعمال الغير ربحية والمجانية
+                            لبعض الجهات الغير ربحية والمساجد وبعض المرافق الخاصة لذوي الاحتياجات. كما أننا ملتزمون
+                            بتطوير وتنمية المواهب المحلية.</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+    <!--  Social Responsibility ends -->
+    <!-- Partners-->
+    <section id="partners" class="padding ltr">
+        <div class="container">
+
+            <div class="row">
+
+
+
+                <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                    <div class="heading-title mb-4">
+                        <h2 class="darkcolor font-normal bottom30">شركاء <span class="defaultcolor">النجاح</span> </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <!--<p class="mb-0">لمواكبة احتياجات العملاء ، نحن ملتزمون بتقديم خدماتنا بشكل شامل.</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div id="partners-slider" class="owl-carousel">
+                        <!-- <div class="item" *ngFor="let p of partners">
+                            <div class="logo-item"> <img alt="" [src]="p.image"></div>
+                        </div> -->
+                        <div class="item" *ngFor="let p of partners">
+                            <div class="logo-item"> <img alt="" [src]="p.image"></div>
+                        </div>
+                        <!-- <div class="item">
+                            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-2.png"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partners ends-->
+
+
+    <!--contact us-->
+    <section id="contact" class="bglight padding position-relative noshadow">
+        <div class="container whitebox">
+            <div class="widget py-5">
+
+                <div class="row">
+
+
+
+                    <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+                        <div class="heading-title mb-4">
+                            <h2 class="darkcolor font-normal bottom30">تواصل <span class="defaultcolor">معنا</span>
+                            </h2>
+                        </div>
+                        <div class="col-md-12">
+                            <!--<p class="mb-0">لمواكبة احتياجات العملاء ، نحن ملتزمون بتقديم خدماتنا بشكل شامل.</p>-->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 order-sm-2 text-center text-md-start">
+                        <div class="contact-meta px-2">
+                            <div class="heading-title text-start">
+
+                                <h2 class="darkcolor font-normal mb-4">المقر الرئيسي</h2>
+                            </div>
+                            <p class="bottom10 text-start">المملكة العربية السعودية - الرياض – حي العليا - شارع موسى بن
+                                نصير – عمائر السيركون رقم 7 – مكتب رقم 2 </p>
+                            <p dir="ltr" class="bottom10 text-start">+966 11 257 55 44</p>
+                            <p class="bottom10 text-start"><a
+                                    href="mailto:info@profconsult.com.sa">info@profconsult.com.sa</a></p>
+                            <p class="bottom10 text-start">Sun-Fri: 9am-5pm</p>
+                            <ul class="social-icons mt-4 mb-4 mb-sm-0 wow fadeInUp text-start" data-wow-delay="300ms"
+                                style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                                <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="heading-title  wow fadeInUp" data-wow-delay="300ms"
+                            style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+                            <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;"
+                                style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+                                <div class="row px-2">
+                                    <div class="col-md-12 col-sm-12" id="result1"></div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="name1" class="d-none"></label>
+                                            <input class="form-control" id="name1" type="text" placeholder="الاسم"
+                                                required="" name="userName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="email1" class="d-none"></label>
+                                            <input class="form-control" type="email" id="email1"
+                                                placeholder="البريد الالكتروني" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="message1" class="d-none"></label>
+                                            <textarea class="form-control" id="message1" placeholder="الرسالة"
+                                                required="" name="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <button type="submit" id="submit_btn1"
+                                            class="button gradient-btn w-100">ارسال</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center top60 w-100 min-h-box">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="fas fa-phone"></i></span>
+                            <p dir="ltr" class="bottom0"><a href="tel:+966 11 257 55 44">+966 11 257 55 44</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center top60 w-100 min-h-box">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="fas fa-fax"></i></span>
+                            <p dir="ltr" class="bottom0"><a href="tel:+966 11 49 69 717">+966 11 49 69 717</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center top60 w-100 min-h-box">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="fas fa-map-marker-alt"></i></span>
+                            <p class="bottom0">المملكة العربية السعودية - الرياض – حي العليا - شارع موسى بن نصير – عمائر
+                                السيركون رقم 7 – مكتب رقم 2 </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center top60 w-100 min-h-box">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="far fa-envelope"></i></span>
+                            <p class="bottom0"><a href="mailto:info@profconsult.com.sa">info@profconsult.com.sa</a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--contact us end-->
+    <!-- Stay connected US -->
+    <section id="stayconnect" class="bglight position-relative">
+        <div class="container">
+            <div class="contactus-wrapp">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="heading-title wow fadeInUp text-center text-md-start" data-wow-delay="300ms">
+                            <h3 class="darkcolor bottom20 text-start">المقر الرئيسي</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6751088938395!2d46.68285530000001!3d24.703692799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03242e2add93%3A0xd71bef3ad81f6520!2sPROF%20CONSULT!5e0!3m2!1sar!2ssa!4v1677270092977!5m2!1sar!2ssa"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact US ends -->
+    <!--Site Footer Here-->
+    <footer id="site-footer" class=" bgdark padding_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="footer_panel padding_bottom_half bottom20">
+
+
+                        <p class="whitecolor">© <span id="year">2019-2023</span> جميع الحقوق محفوظة لشركة بروف كونسلت
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="footer_panel padding_bottom_half bottom20 text-end">
+
+                        <ul class="social-icons white wow fadeInUp" data-wow-delay="300ms">
+                            <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
+                            <li><a href="javascript:void(0)" class="linkedin"><i class="fab fa-linkedin-in"></i> </a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+    <!--Footer ends-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--Bootstrap Core-->
+    <script src="js/propper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--to view items on reach-->
+    <script src="js/jquery.appear.js"></script>
+    <!--Owl Slider-->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--number counters-->
+    <script src="js/jquery-countTo.js"></script>
+    <!--Parallax Background-->
+    <script src="js/parallaxie.js"></script>
+    <!--Cubefolio Gallery-->
+    <script src="js/jquery.cubeportfolio.min.js"></script>
+    <!--Fancybox js-->
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!--Tooltip js-->
+    <script src="js/tooltipster.min.js"></script>
+    <!--wow js-->
+    <script src="js/wow.js"></script>
+    <!--Revolution SLider-->
+    <script src="js/revolution/jquery.themepunch.tools.min.js"></script>
+    <script src="js/revolution/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+    <script src="js/revolution/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.migration.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="js/revolution/extensions/revolution.extension.video.min.js"></script>
+    <!--custom functions and script-->
+    <script src="js/functions.js"></script>
+    <script>
+        $(".staticBox .popClick").click(function () {
+            $(this)
+                .next()
+                .addClass("myshowPop");
+        });
+
+        $(".popupBox span").click(function () {
+            $(".popupBox").removeClass("myshowPop");
+        });
+
+        $(".back").click(function () {
+            $(".popupBox").removeClass("myshowPop");
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -153,19 +153,20 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow" (click)="toggleDropdown()">
                             <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                              <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
-                              <img class="img-profile rounded-circle" src="/assets/vendor/img/undraw_profile.svg">
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
+                                <img class="img-profile rounded-circle" src="/assets/vendor/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                              aria-labelledby="userDropdown">
-                              <a class="dropdown-item" (click)="logout()">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                              </a>
+                            <div *ngIf="isDropdownOpen"
+                                class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" (click)="logout()">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
                             </div>
-                          </li>
+                        </li>
 
                     </ul>
 
@@ -192,33 +193,33 @@
                                     <thead>
                                         <tr>
                                             <th>Image</th>
-                                            <!-- <th>Action</th> -->
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Image</th>
-                                            <!-- <th>Action</th> -->
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr *ngFor="let p of partners">
                                             <td>{{p.fileName}}</td>
-                                            <!-- <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
+                                            <td>
+                                                <!-- <a data-bs-toggle="tooltip" data-bs-title="View details"
                                                     data-bs-placement="top" class="btn btn-primary btn-sm"
                                                     href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
+                                            -->
+                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user" style="margin-right: 10px;"
                                                     data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
+                                                    (click)="openDialog(p)">
                                                     edit
                                                 </a>
                                                 <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
+                                                    data-bs-placement="top" class="btn btn-danger btn-sm" (click)="deleteOne(p.id)">
                                                     Delete
                                                 </button>
-                                            </td> -->
+                                            </td>
                                         </tr>
 
                                     </tbody>

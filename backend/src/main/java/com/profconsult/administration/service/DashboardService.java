@@ -10,19 +10,18 @@ import java.io.IOException;
 import java.util.List;
 
 public interface DashboardService {
-    void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr) throws IOException;
+    void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr , Integer id) throws IOException;
 
     List<Project> getAllItems();
 
-    void submitPartner(MultipartFile file) throws IOException;
+    void submitPartner(MultipartFile file , Integer id) throws IOException;
     List<Partner> getAllPartners();
 
-    void submitGallery(MultipartFile file) throws IOException;
+    void submitGallery(MultipartFile file, Integer id) throws IOException;
     List<Gallery> getAllGalleries();
 
     void submitLinks(LinkObject linkObj);
 
 
-
-
+    boolean deleteGallery(int id,  String key);
 }

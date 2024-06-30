@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Partner } from 'src/app/models/item-object';
 import { AuthService } from 'src/app/services/auth.service';
 import { DashboardService } from 'src/app/services/dashboard.service';
+import { EditPartnerComponent } from './edit-partner/edit-partner.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-partner',
@@ -14,7 +16,7 @@ export class PartnerComponent implements OnInit {
   username: any;
   partners: Partner[] = [];
 
-  constructor(private dashboardService: DashboardService, private authService: AuthService) { }
+  constructor(private dialog: MatDialog,private dashboardService: DashboardService, private authService: AuthService) { }
 
   ngOnInit(): void {
     const token: string | null = localStorage.getItem('token');
@@ -38,5 +40,24 @@ export class PartnerComponent implements OnInit {
 
   logout() {
     this.authService.logout()
+  }
+
+  openDialog(g: Partner): void {
+    const dialogRef = this.dialog.open(EditPartnerComponent, {
+      width: '500px',
+      data: { id: g.id, fileName: g.fileName, file: g.image },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result.result == 'closeSuccess') {
+        this.getAllPartners();
+      }
+    });
+  }
+
+  deleteOne(id: any) {
+    this.dashboardService.deleteOne(id , 'PARTNER').subscribe(data => {
+      this.getAllPartners();
+    })
   }
 }

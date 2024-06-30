@@ -9,6 +9,7 @@ import com.profconsult.administration.repository.CompanyLinksRepository;
 import com.profconsult.administration.repository.GalleryRepository;
 import com.profconsult.administration.repository.PartnerRepository;
 import com.profconsult.administration.repository.ProjectRepository;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -27,19 +28,32 @@ public class DashboardServiceImpl implements DashboardService{
     private final GalleryRepository galleryRepository;
     private final CompanyLinksRepository companyLinksRepository;
     @Override
-    public void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr) throws IOException {
+    public void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr , Integer id) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        Project item = Project.builder()
-                .titleEn(titleEn)
-                .topicEn(topicEn)
-                .titleAr(titleAr)
-                .topicAr(topicAr)
-                .image(file.getBytes())
-                .fileName(fileName)
-                .fileType(file.getContentType())
-                .build();
-
-        item = itemRepository.save(item);
+        Project project;
+        if(!id.equals(000)) {
+            project = Project.builder()
+                    .id(id)
+                    .titleEn(titleEn)
+                    .topicEn(topicEn)
+                    .titleAr(titleAr)
+                    .topicAr(topicAr)
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        } else {
+            project = Project.builder()
+                    .titleEn(titleEn)
+                    .topicEn(topicEn)
+                    .titleAr(titleAr)
+                    .topicAr(topicAr)
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        }
+        project = itemRepository.save(project);
     }
 
     @Override
@@ -49,14 +63,23 @@ public class DashboardServiceImpl implements DashboardService{
 
     /**-------------------------------Partner---------------------------------**/
     @Override
-    public void submitPartner(MultipartFile file) throws IOException {
+    public void submitPartner(MultipartFile file , Integer id) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        Partner partner = Partner.builder()
-                .image(file.getBytes())
-                .fileName(fileName)
-                .fileType(file.getContentType())
-                .build();
-
+        Partner partner;
+        if(!id.equals(000)) {
+            partner = Partner.builder()
+                    .id(id)
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        } else {
+            partner = Partner.builder()
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        }
         partner = partnerRepository.save(partner);
     }
 
@@ -67,13 +90,23 @@ public class DashboardServiceImpl implements DashboardService{
 
     /**-------------------------------Gellary---------------------------------**/
     @Override
-    public void submitGallery(MultipartFile file) throws IOException {
+    public void submitGallery(MultipartFile file, Integer id) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        Gallery gallery = Gallery.builder()
-                .image(file.getBytes())
-                .fileName(fileName)
-                .fileType(file.getContentType())
-                .build();
+        Gallery gallery;
+        if(!id.equals(000)) {
+            gallery = Gallery.builder()
+                    .id(id)
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        } else {
+            gallery = Gallery.builder()
+                    .image(file.getBytes())
+                    .fileName(fileName)
+                    .fileType(file.getContentType())
+                    .build();
+        }
 
         gallery = galleryRepository.save(gallery);
     }
@@ -94,5 +127,19 @@ public class DashboardServiceImpl implements DashboardService{
                 .build();
 
         companyLinks = companyLinksRepository.save(companyLinks);
+    }
+
+    @Override
+    public boolean deleteGallery(int id, String key) {
+        if(key.equals("GALLERY")) {
+            galleryRepository.deleteById(id);
+        } else if(key.equals("PARTNER")) {
+            partnerRepository.deleteById(id);
+        } else if (key.equals("PROJECT")) {
+            itemRepository.deleteById(id);
+        } else {
+            throw new RuntimeException("Unknown key: " + key);
+        }
+        return true;
     }
 }

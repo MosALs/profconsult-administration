@@ -196,7 +196,7 @@
                                             <th>Image</th>
                                             <th>Topic En</th>
                                             <th>Topic Ar</th>
-                                            <!-- <th>Action</th> -->
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -206,7 +206,7 @@
                                             <th>Image</th>
                                             <th>Topic En</th>
                                             <th>Topic Ar</th>
-                                            <!-- <th>Action</th> -->
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -216,21 +216,21 @@
                                             <td>{{p.fileName}}</td>
                                             <td>{{p.topicEn}}</td>
                                             <td>{{p.topicAr}}</td>
-                                            <!-- <td>
-                                                <a data-bs-toggle="tooltip" data-bs-title="View details"
+                                            <td>
+                                                <!--  <a data-bs-toggle="tooltip" data-bs-title="View details"
                                                     data-bs-placement="top" class="btn btn-primary btn-sm"
                                                     href="/view.html"> View</a>
-
-                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user"
+-->
+                                                <a data-bs-toggle="tooltip" data-bs-title="Edit user" style="margin-right: 10px;"
                                                     data-bs-placement="top" class="btn btn-primary btn-sm"
-                                                    href="/edit.html">
+                                                    (click)="openDialog(p)">
                                                     edit
                                                 </a>
                                                 <button data-bs-toggle="tooltip" data-bs-title="Delete user"
-                                                    data-bs-placement="top" class="btn btn-danger btn-sm">
+                                                    data-bs-placement="top" class="btn btn-danger btn-sm" (click)="deleteOne(p.id)">
                                                     Delete
                                                 </button>
-                                            </td> -->
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

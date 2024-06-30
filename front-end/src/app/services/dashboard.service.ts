@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class DashboardService {
   
   
+  
   constructor(private http: HttpClient) { }
 
   submitItem(itemObj: FormData): Observable<any> {
@@ -72,6 +73,10 @@ export class DashboardService {
 
   getAllGalleries() : Observable<Gallery[]> {
     return this.http.get('http://localhost:8080/api/v1/dashboard/all-galleries') as Observable<Gallery[]>;
+  }
+
+  deleteOne(id: any , key :string) {
+    return this.http.delete('http://localhost:8080/api/v1/dashboard/delete/'+id+'/'+key) as Observable<boolean[]>;
   }
 
 }

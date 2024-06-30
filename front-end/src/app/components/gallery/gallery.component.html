@@ -30,34 +30,34 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-            <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-              <!-- Sidebar - Brand -->
-              <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/dashboard">
-                 
-                  <div class="sidebar-brand-text mx-3">PROF CONSULT Admin</div>
-              </a>
-  
-              <!-- Divider -->
-              <hr class="sidebar-divider my-0">
-  
-              <!-- Nav Item - Dashboard -->
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/dashboard">
-                      <i class="fas fa-fw fa-tachometer-alt"></i>
-                      <span>Dashboard</span></a>
-              </li>
-  
-               
-             
-  
-              <!-- Divider -->
-              <hr class="sidebar-divider">
-   
-             
-                
-               <!-- Nav Item - Project -->
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/dashboard">
+
+                <div class="sidebar-brand-text mx-3">PROF CONSULT Admin</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+
+            <!-- Nav Item - Project -->
             <li class="nav-item">
                 <a class="nav-link" routerLink="/project">
                     <i class="fas fa-fw fa-chart-area"></i>
@@ -71,23 +71,23 @@
                     <span>Gallery</span></a>
             </li>
 
-              <!-- Nav Item - Partner -->
-              <li class="nav-item">
+            <!-- Nav Item - Partner -->
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/partner">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Partner</span></a>
             </li>
-  
-              <!-- Divider -->
-              <hr class="sidebar-divider d-none d-md-block">
-  
-              <!-- Sidebar Toggler (Sidebar) -->
-              <div class="text-center d-none d-md-inline">
-                  <button class="rounded-circle border-0" id="sidebarToggle"></button>
-              </div>
-  
-          </ul>
-          <!-- End of Sidebar -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -96,80 +96,81 @@
             <!-- Main Content -->
             <div id="content">
 
-                    <!-- Topbar -->
+                <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                  <!-- Sidebar Toggle (Topbar) -->
-                  <form class="form-inline">
-                      <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                          <i class="fa fa-bars"></i>
-                      </button>
-                  </form>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
-                  <!-- Topbar Search -->
-                  <form
-                      class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                      <div class="input-group">
-                          <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                              aria-label="Search" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                              <button class="btn btn-primary" type="button">
-                                  <i class="fas fa-search fa-sm"></i>
-                              </button>
-                          </div>
-                      </div>
-                  </form>
-
-                  <!-- Topbar Navbar -->
-                  <ul class="navbar-nav ml-auto">
-
-                      <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                      <li class="nav-item dropdown no-arrow d-sm-none">
-                          <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fas fa-search fa-fw"></i>
-                          </a>
-                          <!-- Dropdown - Messages -->
-                          <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                              aria-labelledby="searchDropdown">
-                              <form class="form-inline mr-auto w-100 navbar-search">
-                                  <div class="input-group">
-                                      <input type="text" class="form-control bg-light border-0 small"
-                                          placeholder="Search for..." aria-label="Search"
-                                          aria-describedby="basic-addon2">
-                                      <div class="input-group-append">
-                                          <button class="btn btn-primary" type="button">
-                                              <i class="fas fa-search fa-sm"></i>
-                                          </button>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </li>
-
-                      <div class="topbar-divider d-none d-sm-block"></div>
-
-                      <!-- Nav Item - User Information -->
-                      <li class="nav-item dropdown no-arrow" (click)="toggleDropdown()">
-                        <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
-                          <img class="img-profile rounded-circle" src="/assets/vendor/img/undraw_profile.svg">
-                        </a>
-                        <!-- Dropdown - User Information -->
-                        <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                          aria-labelledby="userDropdown">
-                          <a class="dropdown-item" (click)="logout()">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Logout
-                          </a>
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
                         </div>
-                      </li>
+                    </form>
 
-                  </ul>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
 
-              </nav>
-              <!-- End of Topbar -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow" (click)="toggleDropdown()">
+                            <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
+                                <img class="img-profile rounded-circle" src="/assets/vendor/img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div *ngIf="isDropdownOpen"
+                                class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" (click)="logout()">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -186,57 +187,49 @@
                             <h6 class="m-0 font-weight-bold text-primary">DataGallery Example</h6>
                         </div>
                         <div class="card-body">
-                          <div class="table-responsive">
-                              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                  <thead>
-                                      <tr>
-                                           <th>Image</th>
-                                           <!-- <th>Action</th> -->
-                                      </tr>
-                                  </thead>
-                                  <tfoot>
-                                      <tr>
-                                         <th>Image</th>
-                                         <!-- <th>Action</th> -->
-                                      </tr>
-                                  </tfoot>
-                                  <tbody>
-                                      <tr *ngFor="let g of galleries">
-                                           <td>{{g.fileName}}</td>
-                                           <!-- <td>
-                                            <a
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr *ngFor="let g of galleries">
+                                            <td>{{g.fileName}}</td>
+                                            <td>
+                                         <!--    <a
                                               data-bs-toggle="tooltip"
                                               data-bs-title="View details"
                                               data-bs-placement="top"
                                               class="btn btn-primary btn-sm"
                                               href="/view.html"
                                               > View</a>
-                            
-                                            <a
-                                              data-bs-toggle="tooltip"
-                                              data-bs-title="Edit user"
-                                              data-bs-placement="top"
-                                              class="btn btn-primary btn-sm"
-                                              href="/edit.html"
-                                            >
-                                            edit
+                                         -->
+                                            <a data-bs-toggle="tooltip" data-bs-title="Edit user" style="margin-right: 10px;"
+                                                data-bs-placement="top" class="btn btn-primary btn-sm"
+                                                (click)="openDialog(g)">
+                                                edit
                                             </a>
-                                            <button
-                                              data-bs-toggle="tooltip"
-                                              data-bs-title="Delete user"
-                                              data-bs-placement="top"
-                                              class="btn btn-danger btn-sm"
-                                            >
-                                            Delete
+                                            <button data-bs-toggle="tooltip" data-bs-title="Delete user"
+                                                data-bs-placement="top" class="btn btn-danger btn-sm" (click)="deleteOne(g.id)">
+                                                Delete
                                             </button>
-                                          </td> -->
-                                      </tr>
+                                            </td>
+                                        </tr>
 
-                                     
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

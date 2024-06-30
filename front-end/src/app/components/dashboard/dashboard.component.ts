@@ -47,6 +47,7 @@ export class DashboardComponent implements OnInit {
     payload.append('titleAr', itemForm?.value?.titleAr);
     payload.append('topicEn', itemForm?.value?.topicEn);
     payload.append('topicAr', itemForm?.value?.topicAr);
+    payload.append('id', '000');
 
     // console.log('item form value =  ', itemForm?.value);
     this.dashboardService.submitItem(payload).subscribe(value => {
@@ -69,6 +70,7 @@ export class DashboardComponent implements OnInit {
     const payload = new FormData();
     payload.append('file', this.filesToUpload[0]);
     payload.append('fileName', this.imageName);
+    payload.append('id', '000');
 
     // console.log('item form value =  ', galleryForm?.value);
     this.dashboardService.submitGallery(payload).subscribe(value => {
@@ -81,6 +83,8 @@ export class DashboardComponent implements OnInit {
     const payload = new FormData();
     payload.append('file', this.filesToUpload[0]);
     payload.append('fileName', this.imageName);
+    payload.append('id', '000');
+
     // console.log('item form value =  ', partnerForm?.value);
     this.dashboardService.submitPartner(payload).subscribe(value => {
       console.log('value --------', value);

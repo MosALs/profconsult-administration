@@ -27,8 +27,9 @@ public class DashboardController {
     @PostMapping(path = "/item", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> submitProject(@RequestParam(value = "titleEn") String titleEn, @RequestParam(value = "topicEn") String topicEn,
                                            @RequestParam(value = "titleAr") String titleAr, @RequestParam(value = "topicAr") String topicAr,
+                                           @RequestParam(value = "id" , required = false) Integer id,
                                         @RequestPart("file") MultipartFile file) throws IOException {
-        dashboardService.submitItem(file , titleEn, topicEn, titleAr ,topicAr);
+        dashboardService.submitItem(file , titleEn, topicEn, titleAr ,topicAr ,id);
         return ResponseEntity.ok("done");
     }
 
@@ -39,8 +40,8 @@ public class DashboardController {
 
     /**-------------------------------Gellary---------------------------------**/
     @PostMapping(path = "/gallery", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<?> submitGallery(@RequestPart("file") MultipartFile file) throws IOException {
-        dashboardService.submitGallery(file);
+    public ResponseEntity<?> submitGallery(@RequestPart("file") MultipartFile file , @RequestParam(value = "id" , required = false) Integer id) throws IOException {
+        dashboardService.submitGallery(file, id);
         return ResponseEntity.ok("done");
     }
 
@@ -51,8 +52,8 @@ public class DashboardController {
 
     /**-------------------------------Partner---------------------------------**/
     @PostMapping(path = "/partner", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<?> submitPartner(@RequestPart("file") MultipartFile file) throws IOException {
-        dashboardService.submitPartner(file);
+    public ResponseEntity<?> submitPartner(@RequestPart("file") MultipartFile file, @RequestParam(value = "id" , required = false) Integer id ) throws IOException {
+        dashboardService.submitPartner(file , id);
         return ResponseEntity.ok("done");
     }
 
@@ -66,5 +67,11 @@ public class DashboardController {
     public ResponseEntity<?> submitPartner(@RequestBody LinkObject linkObj) {
         dashboardService.submitLinks(linkObj);
         return ResponseEntity.ok("done");
+    }
+
+    /**-------------------------------Generic for all types---------------------------------**/
+    @DeleteMapping(path = "/delete/{id}/{key}")
+    public ResponseEntity<?> deleteGallery(@PathVariable int id , @PathVariable String key ) {
+        return ResponseEntity.ok(dashboardService.deleteGallery(id , key));
     }
 }
