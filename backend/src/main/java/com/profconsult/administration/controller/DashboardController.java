@@ -25,9 +25,10 @@ public class DashboardController {
 
     /**-------------------------------Project---------------------------------**/
     @PostMapping(path = "/item", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<?> submitProject(@RequestParam(value = "title") String title, @RequestParam(value = "topic") String topic,
+    public ResponseEntity<?> submitProject(@RequestParam(value = "titleEn") String titleEn, @RequestParam(value = "topicEn") String topicEn,
+                                           @RequestParam(value = "titleAr") String titleAr, @RequestParam(value = "topicAr") String topicAr,
                                         @RequestPart("file") MultipartFile file) throws IOException {
-        dashboardService.submitItem(file , title, topic);
+        dashboardService.submitItem(file , titleEn, topicEn, titleAr ,topicAr);
         return ResponseEntity.ok("done");
     }
 

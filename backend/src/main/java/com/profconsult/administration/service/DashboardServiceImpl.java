@@ -27,11 +27,13 @@ public class DashboardServiceImpl implements DashboardService{
     private final GalleryRepository galleryRepository;
     private final CompanyLinksRepository companyLinksRepository;
     @Override
-    public void submitItem(MultipartFile file, String title, String topic) throws IOException {
+    public void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr) throws IOException {
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
         Project item = Project.builder()
-                .title(title)
-                .topic(topic)
+                .titleEn(titleEn)
+                .topicEn(topicEn)
+                .titleAr(titleAr)
+                .topicAr(topicAr)
                 .image(file.getBytes())
                 .fileName(fileName)
                 .fileType(file.getContentType())

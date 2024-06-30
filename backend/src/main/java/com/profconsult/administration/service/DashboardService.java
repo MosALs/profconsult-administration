@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface DashboardService {
-    void submitItem(MultipartFile file, String title, String topic) throws IOException;
+    void submitItem(MultipartFile file, String titleEn, String topicEn, String titleAr, String topicAr) throws IOException;
 
     List<Project> getAllItems();
 

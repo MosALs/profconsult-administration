@@ -18,8 +18,10 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String title;
-    private String topic;
+    private String titleEn;
+    private String topicEn;
+    private String titleAr;
+    private String topicAr;
     @Lob
     private byte[] image;
     private String fileName;

@@ -145,15 +145,16 @@
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+            <li class="nav-item dropdown no-arrow" (click)="toggleDropdown()">
+              <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
                 <img class="img-profile rounded-circle" src="/assets/vendor/img/undraw_profile.svg">
               </a>
               <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+              <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="userDropdown">
+                <a class="dropdown-item" (click)="logout()">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -189,9 +190,14 @@
                   <form #itemForm="ngForm">
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputTitle">Title</label>
-                        <input type="text" ngModel name="title" class="form-control" id="inputTitle"
-                          placeholder="Title">
+                        <label for="inputTitle">Title En</label>
+                        <input type="text" ngModel name="titleEn" class="form-control" id="inputTitle"
+                          placeholder="Title En">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputTitle">Title Ar</label>
+                        <input type="text" ngModel name="titleAr" class="form-control" id="inputTitle"
+                          placeholder="Title Ar">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="formFileMultiple" class="form-label">Image</label>
@@ -201,9 +207,14 @@
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputTipic">Topic</label>
-                        <textarea type="text" ngModel name="topic" class="form-control" rows="3" id="inputTipic"
-                          placeholder="Tipic"> </textarea>
+                        <label for="inputTipic">Topic En</label>
+                        <textarea type="text" ngModel name="topicEn" class="form-control" rows="3" id="inputTipic"
+                          placeholder="Tipic En"> </textarea>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputTipic">Topic Ar</label>
+                        <textarea type="text" ngModel name="topicAr" class="form-control" rows="3" id="inputTipic"
+                          placeholder="Tipic Ar"> </textarea>
                       </div>
                     </div>
                     <button (click)="submitItem(itemForm)" class="btn btn-primary">Save</button>
@@ -282,14 +293,16 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">instagram</div>
                       </div>
-                      <input type="text"  ngModel name="instagramURL" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Url">
+                      <input type="text" ngModel name="instagramURL" class="form-control"
+                        id="inlineFormInputGroupUsername2" placeholder="Url">
                     </div>
                     <label class="sr-only" for="inlineFormInputGroupUsername2">Url</label>
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">linkedin</div>
                       </div>
-                      <input type="text" ngModel name="linkedinURL" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Url">
+                      <input type="text" ngModel name="linkedinURL" class="form-control"
+                        id="inlineFormInputGroupUsername2" placeholder="Url">
                     </div>
 
                     <label class="sr-only" for="inlineFormInputGroupUsername2">Url</label>
@@ -297,7 +310,8 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">twitter</div>
                       </div>
-                      <input type="text" ngModel name="twitterURL" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Url">
+                      <input type="text" ngModel name="twitterURL" class="form-control"
+                        id="inlineFormInputGroupUsername2" placeholder="Url">
                     </div>
 
                     <label class="sr-only" for="inlineFormInputGroupUsername2">Url</label>
@@ -305,7 +319,8 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">facebook</div>
                       </div>
-                      <input type="text" ngModel name="facebookURL" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Url">
+                      <input type="text" ngModel name="facebookURL" class="form-control"
+                        id="inlineFormInputGroupUsername2" placeholder="Url">
                     </div>
 
 

@@ -1,0 +1,131 @@
+{
+  "style":{
+    "dir":"ltr",
+    "lan":"en",
+    "text-end":"",
+    "text-start":""
+   
+  },
+   "header":{
+    "Home":"Home",
+    "About":"About",
+    "Service":"Service",
+    "Projects":"Projects",
+    "Gallery":"Gallery",
+    "Partners":"Partners",
+    "Contact":"Contact",
+    "headerLang":"العربية",
+    "ProfHeader":  " Prof Consult"
+   },
+   "Main-lider":{
+    "text1":"simple but",
+    "text2":"more powerful",
+    "text3":"Prof Consult",
+    "text4":"We believe",
+    "text5":"that engineering",
+    "text6":"is a science",
+    "btn1":"Get Started",
+    "btn2":"contact us"
+  },
+   "About":{
+    "Tiltle":"About",
+    "Tiltle1":"Prof Consult",
+    "Tipoc":"We believe that engineering is a science that civilizations based on it, and it is the base of the urbanization, from this point we do our best efforts to be always one of the basic pillars in providing engineering services on a wide scale in this field. our efforts focusing on adding a value and promoting a permanent development by achieving our works through integral team work including professional group to communicate with our customers in order to gain Excellence, Innovation and Inspiration , and at the same time understand and respect the environment which we live and work in it .",
+    "Tipoc1":"We look forward to being part of the ambition of our good government and its wise leadership in the pursuit of achieving KSA vision 2030 Throughout the past, we have gained vast experience Through various projects. We are committed to maintaining the growth and consolidating the relationship with our customers in the both short and long term.Since established in 2012, PROF CONSULT has set a long – term vision, and has foreseen the potential growth in the industry, accordingly has taken the leading role among the pioneers of this demanding and promising industry.",
+    "pagraf":"since",
+    "Date":"2012",
+    "number":"12",
+    "years":"years",
+    "experience":"experience"
+   },
+   "Feature":{
+    "Vision":"Vision",
+    "Vision-tipoc":"Occupying a leading position in providing engineering services with international standards.",
+    "Vision-number":"01",
+    "Mission":"Mission",
+    "Mission-tipoc":"Professional concepts for engineering consultancy.",
+    "Mission-number":"02",
+    "Target":"Target",
+    "Target-tipoc":"Providing excellent and reliable engineering services in order to get the Satisfaction of our community, customers and employees through outstanding performance of an institution that capable of developing, growing, Creating and innovating.",
+    "Target-number":"03",
+    "Values":"Values",
+    "Values-tipoc":"Credibility in our relations with all partners.",
+    "Values-tipoc1":"Cooperate and communicate with each other at all levels and with our partners in order to achieve success and superiority.",
+    "Values-tipoc2":"We always take care of our employees, partners, our community and our environment",
+    "Values-tipoc3":"We encourage the skills of leadership, innovation, creativity and initiative to embrace thoughts and ideas to reach a permanent development of our services.",
+    "Values-tipoc4":"We aim at superiority and fulfilling our promises and go beyond",
+    "Values-number":"04"
+   },
+   "Serve":{
+    "Tiltle":"What We",
+    "Tiltle1":"Serve",
+    "Tipoc1":"To keep up with customers’ needs, we committed to offer our services comprehensively.",
+    "TiltleDesigns":"Designs works",
+    "TipocDesigns1":"Infrastructure designs: roads, water, sewage (sanitation), torrent, irrigation, electrical and communication networks.",
+    "TipocDesigns2":"Architectural designs:",
+    "TipocDesigns3":"Electro mechanic designs: electrical works designing, water and sanitation feeding, alarm, fire and safety systems, surveillance and security systems, air conditioning.",
+    "TipocDesigns4":"Construction designs (concrete, steel structure)",
+    "TipocDesigns5":"Interior designs",
+    "TipocDesigns6":"Sites coordination designs",
+    "Evaluation":"Evaluation",
+    "TiltleEvaluation":"studying and evaluating (appreciation) of the institutions structures",
+    "TiltleStudies":"Studies",
+    "TipocStudies1":"Social and economic studies and effect analysis.",
+    "TipocStudies2":"Traffic and transport studies",
+    "TipocStudies3":"urbanization studies",
+    "Economic":"Economic and environmental consultancy",
+     "Surveyworks":"Survey works",
+    "GIS":"G I S: geographic information system",
+    "Labs":"Labs",
+    "Projectsmanagement":"Projects management",
+     "PreparationOfProject":"Preparation of projects specifications and bills of quantities.",
+    "Architectureandplanning":"Architecture and planning",
+    "Arbitration":"Arbitration in geometric differences",
+    "ProjectSworks":"Project supervision works"
+   },
+  "Certificates": {
+    "Tiltle":"Certificates",
+     "Tipoc":"We provide services in certified professional ways.",
+     "Tiltle1":"IOS 9001:2015",
+     "Tipoc1":"International Standard specifies requirements for a quality management system.",
+     "Tiltle2":"IOS 45001:2018",
+     "Tipoc2":"International Standard specifies requirements for an occupational health and safety (OH&S) management system "
+  },
+  "Projects":{
+    "Tiltle":"Our",
+    "Tiltle1":"Projects",
+    "Tipoc":"To keep up with customers’ needs, we committed to offer our services comprehensively."
+  },
+  "Gallery":{
+    "Tiltle":"Gallery",
+    "Tiltle1":"Our",
+    "Tipoc":"To keep up with customers’ needs, we committed to offer our services comprehensively."
+  },
+  "Partners":{
+    "Tiltle":"Partners",
+    "Tiltle1":"Success",
+    "Tipoc":"To keep up with customers’ needs, we committed to offer our services comprehensively."
+  },
+   "ContactUS":{
+    "Tiltle":"Us",
+    "Tiltle1":"Contact",
+    "Tipoc":"To keep up with customers’ needs, we committed to offer our services comprehensively."
+  },
+  "Office":{
+      "Tipoc":"Our Agency Office In Riyadh",
+    "tipoc1":"Our Agency Office In Riyadh",
+    "Tipoc2":"+966 11 257 55 44",
+    "Tipoc3":"info@proffconsult.com",
+    "Tipoc4":"Sun-Fri: 9am-5pm",
+    "Tipoc5":"+966 11 257 55 44",
+    "Tipoc6":"+966 11 49 69 717",
+    "Tipoc7":"Silicon Building No. 7 2827 Mousa Bin Nusair Road, Al-'Olayya District، الرياض 12241 ",
+    "Tipoc8":"info@proffconsult.com",
+    "Send":"Send",
+    "map":"Find Us in Map",
+    "Footer":"©",
+    "Footer1":" 2019-2024",
+    "Footer2":"All Rights Reserved By Prof Consult"
+ 
+  }
+  }

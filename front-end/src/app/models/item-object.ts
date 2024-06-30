@@ -1,6 +1,8 @@
 export interface ItemObject{
-    title:any;
-    topic:any;
+    titleEn:any;
+    topicEn:any;
+    titleAr:any;
+    topicAr:any;
     file:File;
     fileName:any;
 } 

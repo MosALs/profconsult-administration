@@ -1,0 +1,1005 @@
+
+<!-- <html dir="{{ 'style.dir' | translate }}" lang="{{ 'style.lan' | translate }}"> -->
+
+<html dir="{{ 'style.dir' | translate }}" lang="en">
+
+ 
+<body data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="75" class="offset-nav" [ngClass]="currentDesign">
+
+
+<!--PreLoader-->
+<div class="loader">
+  <div class="loader-inner">
+    <div class="cssload-loader"></div>
+  </div>
+</div>
+<!--PreLoader Ends-->
+<!-- header -->
+<header class="site-header" id="header">
+  <nav class="navbar navbar-expand-lg transparent-bg static-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="/assets/webpage/images/logo-transparent.png" alt="logo" class="logo-default">
+        <img src="/assets/webpage/images/logo.png" alt="logo" class="logo-scrolled">
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item position-relative">
+            <a class="nav-link active pagescroll" href="#home">{{ 'header.Home' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#about">{{ 'header.About' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#services">{{ 'header.Service' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#projects">{{ 'header.Projects' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#gallery">{{ 'header.Gallery' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#partners">{{ 'header.Partners' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#contact">{{ 'header.Contact' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <!-- webpage.component.html -->
+            <a class="nav-link pagescroll" (click)="switchLanguageAndDesign()">{{ currentLang === 'en' ? 'العربية' : 'English'
+              }}</a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--side menu open button-->
+    <a href="javascript:void(0)" class="d-inline-block sidemenu_btn" id="sidemenu_toggle">
+      <span></span> <span></span> <span></span>
+    </a>
+  </nav>
+  <!-- side menu -->
+  <div class="side-menu opacity-0 gradient-bg">
+    <div class="overlay"></div>
+    <div class="inner-wrapper">
+      <span class="btn-close btn-close-no-padding" id="btn_sideNavClose"><i></i><i></i></span>
+      <nav class="side-nav w-100">
+        <ul class="navbar-nav">
+          <li class="nav-item position-relative">
+            <a class="nav-link pagescroll" href="#home">{{ 'header.Home' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#about">{{ 'header.About' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#services">{{ 'header.Service' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#projects">{{ 'header.Projects' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#gallery">{{ 'header.Gallery' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#partners">{{ 'header.Partners' | translate }}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link pagescroll" href="#contact">{{ 'header.Contact' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pagescroll" (click)="switchLanguageAndDesign()">
+              {{ currentLang === 'en' ? 'العربية' : 'English' }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="side-footer w-100">
+        <ul class="social-icons-simple white top40">
+          <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+          <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+          <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+        </ul>
+        <p class="whitecolor">&copy; <span id="year"></span>{{ 'header.ProfHeader' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <div id="close_side_menu" class="tooltip"></div>
+  <!-- End side menu -->
+</header>
+<!-- header -->
+<!--Main Slider-->
+<section id="home"  >
+
+  <h2 class="d-none">heading</h2>
+  <div id="revo_main_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
+    <div id="rev_one_page" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+      <ul>
+        <!-- SLIDE  -->
+        <li data-index="rs-01" data-transition="fade" data-slotamount="default" data-easein="Power3.easeInOut"
+          data-easeout="Power3.easeInOut" data-masterspeed="2000" data-fsmasterspeed="1500" class="banner-overlay">
+          <!-- MAIN IMAGE -->
+          <div class="overlay overlay-dark opacity-6"></div>
+          <img src="/assets/webpage/images/home/banner-single-1.jpg" alt="" data-bgposition="center center"
+            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="10" data-no-retina>
+          <!-- LAYER NR. 1 -->
+          <div class="tp-caption tp-resizeme z-index-1 font-light2 text-capitalize whitecolor"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['-100','-100','-140','-140']"
+            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+            data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
+            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000"
+            data-splitin="none" data-splitout="none">{{ 'Main-lider.text1' | translate }}
+          </div>
+          <div class="tp-caption tp-resizeme font-bold z-index-2 text-capitalize whitecolor"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-70','-70']"
+            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200" data-splitin="none"
+            data-splitout="none">{{ 'Main-lider.text2' | translate }}
+          </div>
+          <div class="tp-caption tp-resizeme z-index-3 font-xlight whitecolor text-capitalize"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['40','40','0','0']"
+            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+            data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000"
+            data-splitin="none" data-splitout="none">{{ 'Main-lider.text3' | translate }}
+          </div>
+          <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['120','120','100','100']"
+            data-textalign="['center','center','center','center']" data-whitespace="nowrap" data-transform_idle="o:1;"
+            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+            data-transform_out="s:900;e:Power2.easeInOut;s:900;e:Power2.easeInOut;"
+            data-frames='[{"delay":700,"speed":2000,"frame":"0","from":"sX:1;sY:1;opacity:0;fb:40px;","to":"o:1;fb:0;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;"}]'>
+            <a href="home" class="button btn-primaryred font-13">{{ 'Main-lider.btn1' | translate }}</a>
+          </div>
+        </li>
+        <!-- SLIDE 2  -->
+        <li data-index="rs-02" data-transition="fade" data-slotamount="default" data-easein="Power3.easeInOut"
+          data-easeout="Power3.easeInOut" data-masterspeed="2000" data-fsmasterspeed="1500" class="banner-overlay">
+          <!-- MAIN IMAGE -->
+          <div class="overlay overlay-dark opacity-6"></div>
+          <img src="/assets/webpage/images/home/banner-single-2.jpg" alt="" data-bgposition="center center"
+            data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="10" data-no-retina>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption tp-resizeme z-index-5 font-xlight whitecolor text-capitalize"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['-80','-80','-60','-60']"
+            data-fontsize="['32','32','30','28']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+            data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+            data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200" data-splitin="none"
+            data-splitout="none" style="letter-spacing: 1px;">{{ 'Main-lider.text4' | translate }}
+          </div>
+          <div class="tp-caption tp-resizeme z-index-6 font-normal whitecolor text-capitalize"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['-20','-20','-10','-10']"
+            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+            data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000"
+            data-splitin="none" data-splitout="none">{{ 'Main-lider.text5' | translate }}
+          </div>
+          <div class="tp-caption tp-resizeme z-index-7 font-bold whitecolor text-capitalize"
+            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['45','45','50','50']"
+            data-fontsize="['48','48','46','45']" data-whitespace="nowrap" data-responsive_offset="on"
+            data-width="['none','none','none','none']" data-type="text"
+            data-textalign="['right','right','right','center']" data-transform_idle="o:1;"
+            data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500"
+            data-splitin="none" data-splitout="none" style="line-height:30px">{{ 'Main-lider.text6' | translate }}
+          </div>
+          <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+            data-y="['middle','middle','middle','middle']" data-voffset="['120','120','120','120']"
+            data-textalign="['center','center','center','center']" data-whitespace="nowrap" data-transform_idle="o:1;"
+            data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+            data-transform_out="s:900;e:Power2.easeInOut;s:900;e:Power2.easeInOut;" data-type="button" data-start="2000"
+            data-splitin="none" data-splitout="none" data-responsive_offset="on">
+            <a href="#contact" class="button btn-primaryred font-13 mr-2">{{ 'Main-lider.btn2' | translate }}</a>
+
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+<!--Main Slider ends -->
+<!--Some Feature -->
+<section id="about" class="single-feature padding">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-lg-7 col-md-8 col-sm-8 text-sm-start text-center wow fadeInLeft" data-wow-delay="300ms">
+
+        <div class="heading-title mb-4 " [ngClass]="currentLang === 'en' ? '' : 'text-start'">
+          <h2 class="darkcolor font-normal bottom30">{{ 'About.Tiltle' | translate }} <span class="defaultcolor">{{
+              'About.Tiltle1' | translate }}</span> </h2>
+        </div>
+        <p class="bottom35">{{ 'About.Tipoc' | translate }}</p>
+        <p class="bottom35">{{ 'About.Tipoc1' | translate }}</p>
+      </div>
+      <div class="col-lg-4 offset-lg-1 col-md-4 col-sm-4 wow fadeInRight" data-wow-delay="300ms">
+
+        <div
+          style="background-image: url(&quot;/assets/webpage/images/zoom-count-bg.jpg&quot;); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
+          class="zoom-counter__card">
+          <div class="zoom-counter__card-title">
+            <p>{{ 'About.pagraf' | translate }}</p>
+            <p>{{ 'About.Date' | translate }}</p>
+          </div>
+          <div data-counter-value="25" class="zoom-counter__card-value js-counter animated">{{ 'About.number' |
+            translate }}</div>
+          <div class="zoom-counter__card-description">{{ 'About.years' | translate }}<br>{{ 'About.experience' |
+            translate }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Some Feature ends-->
+
+
+<section class="single-feature">
+  <div class="container">
+    <div class="cards">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="cards__item col-12 col-md-6 col-xl-3"><a
+              style="background-image: url('/assets/webpage/images/card-image-1.jpg')" href="#"
+              class="cards__item-inner"><span class="cards__item-content"><span class="cards__item-title">{{
+                  'Feature.Vision' | translate }}</span><span class="cards__item-text">{{ 'Feature.Vision-tipoc' |
+                  translate }}</span>
+                <span class="cards__arrow">{{ 'Feature.Vision-number' | translate }}</span></span></a></div>
+
+          <div class="cards__item col-12 col-md-6 col-xl-3"><a
+              style="background-image: url('/assets/webpage/images/card-image-2.jpg')" href="#"
+              class="cards__item-inner"><span class="cards__item-content"><span class="cards__item-title"> {{
+                  'Feature.Mission' | translate }}</span><span class="cards__item-text">{{ 'Feature.Mission-tipoc' |
+                  translate }}</span><span class="cards__arrow">{{ 'Feature.Mission-number' | translate
+                  }}</span></span></a></div>
+
+          <div class="cards__item col-12 col-md-12 col-xl-6"><a
+              style="background-image: url('/assets/webpage/images/card-image-3.jpg')" href="#"
+              class="cards__item-inner"><span class="cards__item-content"><span class="cards__item-title">{{
+                  'Feature.Target' | translate }}</span><span class="cards__item-text">{{ 'Feature.Target-tipoc' |
+                  translate }}</span><span class="cards__arrow">{{ 'Feature.Target-number' | translate
+                  }}</span></span></a></div>
+
+
+
+          <div class="cards__item col-12 col-md-12 col-xl-12"><a
+              style="background-image: url('/assets/webpage/images/banner1-1.jpg')" href="#"
+              class="cards__item-inner"><span class="cards__item-content"><span class="cards__item-title">{{
+                  'Feature.Values' | translate }}</span><span class="cards__item-text">
+
+                  <ul class="rounded heading_space text-start">
+                    <li> {{ 'Feature.Values-tipoc' | translate }}</li>
+                    <li> {{ 'Feature.Values-tipoc1' | translate }}</li>
+                    <li> {{ 'Feature.Values-tipoc2' | translate }} </li>
+                    <li> {{ 'Feature.Values-tipoc3' | translate }}</li>
+                    <li> {{ 'Feature.Values-tipoc4' | translate }}</li>
+                  </ul>
+
+
+
+                </span><span class="cards__arrow">{{ 'Feature.Values-number' | translate }}</span></span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+<section id="services" class="padding bglight">
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+        <div class="heading-title mb-4">
+          <h2 class="darkcolor font-normal bottom30">{{ 'Serve.Tiltle' | translate }} <span class="defaultcolor">{{
+              'Serve.Tiltle1' | translate }}</span> </h2>
+        </div>
+        <div class="col-md-8 " [ngClass]="currentLang === 'en' ? 'offset-md-2' : 'offset-md-12'">
+          <p class="mb-0">{{ 'Serve.Tipoc1' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-md-6 col-sm-12 text-center">
+
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor">{{ 'Serve.TiltleDesigns' | translate }}</h3>
+
+
+            <ul class="pricing-list">
+              <li> {{ 'Serve.TipocDesigns1' | translate }}</li>
+              <li> {{ 'Serve.TipocDesigns2' | translate }} </li>
+              <li> {{ 'Serve.TipocDesigns3' | translate }}</li>
+              <li> {{ 'Serve.TipocDesigns4' | translate }}</li>
+              <li> {{ 'Serve.TipocDesigns5' | translate }}</li>
+              <li> {{ 'Serve.TipocDesigns6' | translate }}</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Evaluation' | translate }}</h3>
+            <p>{{ 'Serve.TiltleEvaluation' | translate }}</p>
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.PreparationOfProject' | translate }}</h3>
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-sm-12 text-center">
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.TiltleStudies' | translate }}</h3>
+
+
+            <ul class="pricing-list">
+              <li> {{ 'Serve.TipocStudies1' | translate }}</li>
+              <li> {{ 'Serve.TipocStudies2' | translate }}</li>
+              <li> {{ 'Serve.TipocStudies3' | translate }}</li>
+
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Surveyworks' | translate }}</h3>
+
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Labs' | translate }} </h3>
+
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Architectureandplanning' | translate }} </h3>
+
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.ProjectSworks' | translate }}</h3>
+
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-sm-12 text-center">
+
+
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Economic' | translate }}</h3>
+
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.GIS' | translate }}</h3>
+
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Projectsmanagement' | translate }}</h3>
+            <p>{{ 'Serve.TiltleStudies' | translate }}</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="pricing-item wow fadeInUp animated" data-wow-delay="300ms" data-sale="60">
+            <h3 class="font-light darkcolor"> {{ 'Serve.Arbitration' | translate }} </h3>
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Certificates -->
+<section class="padding bg-counters parallax">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 text-center">
+      <div class="heading-title darkcolor wow fadeInUp bottom60" data-wow-delay="300ms">
+
+        <h2 class="font-normal bottom30 whitecolor"> {{ 'Certificates.Tiltle' | translate }} </h2>
+        <span class="whitecolor">{{ 'Certificates.Tipoc' | translate }} </span>
+      </div>
+    </div>
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="flix-left"><img src="/assets/webpage/images/iso1.png" alt="">
+          <div class="whitecolor padding_left">
+            <h3>{{ 'Certificates.Tiltle1' | translate }} </h3>
+
+            <p class="whitecolor top20 bottom20 font-light title"> {{ 'Certificates.Tipoc1' | translate }}</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="flix-left"><img src="/assets/webpage/images/iso2.png" alt="">
+          <div class="whitecolor padding_left">
+            <h3>{{ 'Certificates.Tiltle2' | translate }} </h3>
+
+            <p class="whitecolor top20 bottom20 font-light title"> {{ 'Certificates.Tipoc2' | translate }} </p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- Certificates ends-->
+
+<!--Projects-->
+<section id="projects" class="padding">
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+        <div class="heading-title mb-4">
+          <h2 class="darkcolor font-normal bottom30">{{ 'Projects.Tiltle' | translate }} <span class="defaultcolor">{{
+              'Projects.Tiltle1' | translate }}</span> </h2>
+        </div>
+        <div class="col-md-8" [ngClass]="currentLang === 'en' ? 'offset-md-2' : 'offset-md-12'">
+          <p class="mb-0">{{ 'Projects.Tipoc' | translate }}</p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Multiple Pop Up -->
+    <div class="multiplePopUp top-bot-pad">
+      <div class="row equal-shadow-team">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-4" *ngFor="let item of items; let i = index">
+          <div class="mypop">
+            <div class="staticBox">
+              <div class="popClick" (click)="showPopup(i)">
+                <div class="team-box">
+                  <div class="image">
+                    <img [src]="item.image" alt="">
+                  </div>
+                  <div class="team-content">
+                    <h4 class="darkcolor">{{ item.title }}</h4>
+                    <ul class="social-icons-simple">
+                      <li>{{ item.amount }}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="popupBox" [ngClass]="{'myshowPop': isPopupVisible[i]}">
+                <div class="back" (click)="hidePopup(i)"></div>
+                <div class="popConte">
+                  <span (click)="hidePopup(i)">Close</span>
+                  <h5>{{ item.titleEn }}</h5>
+                  <!-- <p class="p-a">Project Amount: ( {{ item.amount }} ) SR</p> -->
+                  <p>{{item.topicEn}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--Projects end-->
+
+
+<!-- Gallery -->
+<section id="gallery" class="position-relative padding  bglight">
+  <div class="container">
+
+    <div class="row">
+
+
+
+      <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+        <div class="heading-title mb-4">
+          <h2 class="darkcolor font-normal bottom30">{{ 'Gallery.Tiltle1' | translate }} <span class="defaultcolor">{{
+              'Gallery.Tiltle' | translate }}</span> </h2>
+        </div>
+        <div class="col-md-8" [ngClass]="currentLang === 'en' ? 'offset-md-2' : 'offset-md-12'">
+          <p class="mb-0">{{ 'Gallery.Tipoc' | translate }}</p>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="row">
+
+
+      <div class="col-lg-12">
+        <div id="grid-mosaic" class="cbp cbp-l-grid-mosaic-flat">
+          <!--Item 1-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-1.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-1.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+          <!--Item 2-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-9.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-9.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+          <!--Item 3-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-11.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-11.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+          <!--Item 4-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-2.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-2.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+          <!--Item 5-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-7.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-7.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+          <!--Item 6-->
+          <div class="cbp-item">
+            <img src="/assets/webpage/images/gallery/gallery-3.jpg" alt="">
+            <div class="gallery-hvr whitecolor">
+              <div class="center-box">
+                <a href="/assets/webpage/images/gallery/gallery-3.jpg" class="opens" data-fancybox="gallery"
+                  title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Gallery ends -->
+<!-- Partners-->
+<section id="partners" class="padding" [ngClass]="currentLang === 'en' ? '' : 'ltr'">
+  <div class="container">
+
+    <div class="row">
+
+
+
+      <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+        <div class="heading-title mb-4">
+          <h2 class="darkcolor font-normal bottom30">{{ 'Partners.Tiltle1' | translate }} <span class="defaultcolor">{{
+              'Partners.Tiltle' | translate }}</span> </h2>
+        </div>
+        <div class="col-md-8" [ngClass]="currentLang === 'en' ? 'offset-md-2' : 'offset-md-12'">
+          <p class="mb-0">{{ 'Partners.Tipoc' | translate }}</p>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12">
+        <div id="partners-slider" class="owl-carousel">
+          <div class="item">
+            <div class="logo-item"> <img alt="" src="/assets/webpage/images/partners/logo-1.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-2.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-3.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-4.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-5.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-6.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-7.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-8.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-9.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-10.png"></div>
+          </div>
+
+
+          <div class="item">
+            <div class="logo-item"> <img alt="" src="/assets/webpage/images/partners/logo-11.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-12.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-13.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-14.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-15.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-16.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-17.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-18.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-19.png"></div>
+          </div>
+          <div class="item">
+            <div class="logo-item"><img alt="" src="/assets/webpage/images/partners/logo-20.png"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Partners ends-->
+
+
+<!--contact us-->
+<section id="contact" class="bglight padding position-relative noshadow">
+  <div class="container whitebox">
+    <div class="widget py-5">
+
+      <div class="row">
+
+
+
+        <div class="col-md-12 text-center heading_space animated wow fadeIn" data-wow-delay="300ms">
+          <div class="heading-title mb-4">
+            <h2 class="darkcolor font-normal bottom30">{{ 'ContactUS.Tiltle1' | translate }} <span
+                class="defaultcolor">{{ 'ContactUS.Tiltle' | translate }}</span> </h2>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            <p class="mb-0">{{ 'ContactUS.Tipoc' | translate }}</p>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <div class="row">
+
+        <div class="col-md-6 col-sm-6 order-sm-2 text-center text-md-start">
+          <div class="contact-meta px-2">
+            <div class="heading-title" [ngClass]="currentLang === 'en' ? '' : 'text-start'">
+
+              <h2 class="darkcolor font-normal mb-4"><span class="d-none d-md-inline-block"></span> <span
+                  class="d-none d-md-inline-block"> {{ 'Office.Tipoc' | translate }}</span></h2>
+            </div>
+            <p class="bottom10" [ngClass]="currentLang === 'en' ? '' : 'text-start'">{{ 'Office.tipoc1' | translate }}
+            </p>
+            <p class="bottom10" [ngClass]="currentLang === 'en' ? '' : 'text-start'">{{ 'Office.Tipoc2' | translate }}
+            </p>
+            <p class="bottom10" [ngClass]="currentLang === 'en' ? '' : 'text-start'"><a
+                href="mailto:info@proffconsult.com">{{ 'Office.Tipoc3' | translate }}</a></p>
+            <p class="bottom10" [ngClass]="currentLang === 'en' ? '' : 'text-start'">{{ 'Office.Tipoc4' | translate }}
+            </p>
+            <ul class="social-icons mt-4 mb-4 mb-sm-0 wow fadeInUp" [ngClass]="currentLang === 'en' ? '' : 'text-start'"
+              data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+              <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+              <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+              <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i> </a> </li>
+              <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="heading-title  wow fadeInUp" data-wow-delay="300ms"
+            style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp;">
+            <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;"
+              style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+              <div class="row px-2">
+                <div class="col-md-12 col-sm-12" id="result1"></div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label for="name1" class="d-none"></label>
+                    <input class="form-control" id="name1" type="text" placeholder="Name:" required="" name="userName">
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label for="email1" class="d-none"></label>
+                    <input class="form-control" type="email" id="email1" placeholder="Email:" name="email">
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <div class="form-group">
+                    <label for="message1" class="d-none"></label>
+                    <textarea class="form-control" id="message1" placeholder="Message:" required=""
+                      name="message"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                  <button type="submit" id="submit_btn1" class="button gradient-btn w-100">{{ 'Office.Send' | translate
+                    }}</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <div class="widget text-center top60 w-100 min-h-box">
+          <div class="contact-box">
+            <span class="icon-contact defaultcolor"><i class="fas fa-phone"></i></span>
+            <p class="bottom0"><a href="tel:+966 11 257 55 44">{{ 'Office.Tipoc5' | translate }}</a></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="widget text-center top60 w-100 min-h-box">
+          <div class="contact-box">
+            <span class="icon-contact defaultcolor"><i class="fas fa-fax"></i></span>
+            <p class="bottom0"><a href="tel:+966 11 49 69 717">{{ 'Office.Tipoc6' | translate }}</a></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="widget text-center top60 w-100 min-h-box">
+          <div class="contact-box">
+            <span class="icon-contact defaultcolor"><i class="fas fa-map-marker-alt"></i></span>
+            <p class="bottom0">{{ 'Office.Tipoc7' | translate }}</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="widget text-center top60 w-100 min-h-box">
+          <div class="contact-box">
+            <span class="icon-contact defaultcolor"><i class="far fa-envelope"></i></span>
+            <p class="bottom0"><a href="mailto:info@proffconsult.com">{{ 'Office.Tipoc8' | translate }}</a></p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!--contact us end-->
+<!-- Stay connected US -->
+<section id="stayconnect" class="bglight position-relative">
+  <div class="container">
+    <div class="contactus-wrapp">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="heading-title wow fadeInUp text-center text-md-start" data-wow-delay="300ms">
+            <h3 class="darkcolor bottom20" [ngClass]="currentLang === 'en' ? '' : 'text-start'">{{ 'Office.map' |
+              translate }}</h3>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6751088938395!2d46.68285530000001!3d24.703692799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03242e2add93%3A0xd71bef3ad81f6520!2sPROF%20CONSULT!5e0!3m2!1sar!2ssa!4v1677270092977!5m2!1sar!2ssa"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact US ends -->
+<!--Site Footer Here-->
+<footer id="site-footer" class=" bgdark padding_top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="footer_panel padding_bottom_half bottom20 " ng-style="style.text-end">
+
+
+          <p class="whitecolor">{{ 'Office.Footer' | translate }} <span id="year">{{ 'Office.Footer1' | translate
+              }}</span> {{ 'Office.Footer2' | translate }}</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="footer_panel padding_bottom_half bottom20 "
+          [ngClass]="currentLang === 'en' ? 'text-md-end' : 'text-end'">
+
+          <ul class="social-icons white wow fadeInUp" data-wow-delay="300ms">
+            <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+            <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
+            <li><a href="javascript:void(0)" class="linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+            <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
