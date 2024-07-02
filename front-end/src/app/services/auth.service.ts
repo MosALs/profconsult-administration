@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { JwtPayload, jwtDecode } from 'jwt-decode';
+import { environment } from 'src/environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class AuthService {
       username: username,
       password: password
     };
-    return this.http.post('http://localhost:8080/api/v1/auth/signin', data);
+    return this.http.post(environment.serverUrl+'api/v1/auth/signin', data);
   }
 
   logout() {

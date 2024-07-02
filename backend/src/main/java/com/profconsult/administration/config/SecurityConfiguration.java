@@ -32,20 +32,23 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final UserService userService;
+
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers(
-                        new AntPathRequestMatcher("/api/v1/auth/**" ),
-                        new AntPathRequestMatcher("/api/v1/dashboard/**" ))
-                        .permitAll().anyRequest().authenticated())
+                .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers("/api/v1/auth/**", "/api/v1/dashboard/**").permitAll()
+                        .requestMatchers("/static/**", "/resources/**", "/", "/css/**", "/**.css", "/**.js", "/images/**", "/*.html", "/favicon.ico",
+                                "/assets/fonts/micons/**", "/fonts/**",
+                                "/fontawesome*", "/resources/**", "/public/**", "/assets/**").permitAll()
+                        .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         DefaultSecurityFilterChain http1 = http.build();
         return http1;
     }
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

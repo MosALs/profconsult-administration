@@ -18,7 +18,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/v1/dashboard")
 @RequiredArgsConstructor
-@CrossOrigin(value = "http://localhost:4200")
+@CrossOrigin(value = "*")
 public class DashboardController {
 
     private final DashboardService dashboardService;

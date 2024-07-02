@@ -78,16 +78,18 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--        </dependency>-->
 
 
     </dependencies>
 
 
     <build>
+
+        <finalName>profconsult</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
