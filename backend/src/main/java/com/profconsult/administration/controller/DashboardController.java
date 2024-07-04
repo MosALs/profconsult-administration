@@ -1,19 +1,28 @@
 package com.profconsult.administration.controller;
 
 
+import com.profconsult.administration.config.ImageUtils;
 import com.profconsult.administration.dao.request.LinkObject;
 import com.profconsult.administration.dao.request.SignUpRequest;
 import com.profconsult.administration.dao.request.SigninRequest;
+import com.profconsult.administration.dao.response.GalleryDto;
 import com.profconsult.administration.dao.response.JwtAuthenticationResponse;
+import com.profconsult.administration.dao.response.ProjectDto;
+import com.profconsult.administration.entity.Partner;
+import com.profconsult.administration.entity.Project;
 import com.profconsult.administration.service.AuthenticationService;
 import com.profconsult.administration.service.DashboardService;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.DataFormatException;
 
 @RestController
 @RequestMapping("/api/v1/dashboard")
@@ -35,7 +44,29 @@ public class DashboardController {
 
     @GetMapping(path = "/all-items")
     public ResponseEntity<?> getAllProjects() {
-        return ResponseEntity.ok(dashboardService.getAllItems());
+        List<ProjectDto> projects = new ArrayList<>();
+        dashboardService.getAllItems().forEach(item -> {
+                String base64Image = null;
+                try {
+                    base64Image = Base64.encodeBase64String(ImageUtils.decompressImage(item.getImage()));
+                } catch (DataFormatException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                ProjectDto projectDto = ProjectDto.builder()
+                        .image(base64Image)
+                        .fileName(item.getFileName())
+                        .fileType(item.getFileType())
+                        .id(item.getId())
+                        .titleAr(item.getTitleAr())
+                        .titleEn(item.getTitleEn())
+                        .topicAr(item.getTopicAr())
+                        .topicEn(item.getTopicEn())
+                        .build();
+                projects.add(projectDto);
+        });
+        return ResponseEntity.ok(projects);
     }
 
     /**-------------------------------Gellary---------------------------------**/
@@ -47,7 +78,26 @@ public class DashboardController {
 
     @GetMapping(path = "/all-galleries")
     public ResponseEntity<?> getAllGalleries() {
-        return ResponseEntity.ok(dashboardService.getAllGalleries());
+        List<GalleryDto> galleryDtoList = new ArrayList<>();
+        dashboardService.getAllGalleries().forEach(gallery -> {
+
+            String base64Image = null;
+            try {
+                base64Image = Base64.encodeBase64String(ImageUtils.decompressImage(gallery.getImage()));
+            } catch (DataFormatException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            GalleryDto galleryDto = GalleryDto.builder()
+                    .image(base64Image)
+                    .fileName(gallery.getFileName())
+                    .fileType(gallery.getFileType())
+                    .id(gallery.getId())
+                    .build();
+            galleryDtoList.add(galleryDto);
+        });
+        return ResponseEntity.ok(galleryDtoList);
     }
 
     /**-------------------------------Partner---------------------------------**/
@@ -59,7 +109,23 @@ public class DashboardController {
 
     @GetMapping(path = "/all-partners")
     public ResponseEntity<?> getAllPartners() {
-        return ResponseEntity.ok(dashboardService.getAllPartners());
+        List<GalleryDto> partners = new ArrayList<>();
+        dashboardService.getAllPartners().forEach(partner -> {
+            try {
+                GalleryDto partnerDto = GalleryDto.builder()
+                        .fileName(partner.getFileName())
+                        .image(Base64.encodeBase64String(ImageUtils.decompressImage(partner.getImage())))
+                        .fileType(partner.getFileType())
+                        .id(partner.getId())
+                        .build();
+                partners.add(partnerDto);
+            } catch (DataFormatException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        return ResponseEntity.ok(partners);
     }
 
     /**-------------------------------Links---------------------------------**/

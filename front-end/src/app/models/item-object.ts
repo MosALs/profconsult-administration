@@ -12,12 +12,14 @@ export interface Partner{
     id:any;
     image:File;
     fileName:any;
+    fileType:any;
 }
 
 export interface Gallery{
     id:any;
     image:File;
     fileName:any;
+    fileType:any;
 }
 
 export interface ComnpanyLinks{

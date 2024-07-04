@@ -72,7 +72,7 @@ export class DashboardService {
     return this.http.get(environment.serverUrl+'api/v1/dashboard/all-partners') as Observable<Partner[]>;
   }
 
-  getAllGalleries() : Observable<Gallery[]> {
+  getAllGalleries() : Observable<any[]> {
     console.log('url= ',environment.serverUrl+'api/v1/dashboard/all-galleries' );
     
     return this.http.get(environment.serverUrl+'api/v1/dashboard/all-galleries') as Observable<Gallery[]>;

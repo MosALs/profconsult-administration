@@ -28,7 +28,7 @@ export class HomearComponent implements OnInit {
         let objectURL = 'data:image/png;base64,' + element.image;
         // console.log(objectURL);
 
-        element.image = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+        element.image = objectURL;
         // console.log(element.image);
       });
 
@@ -40,11 +40,8 @@ export class HomearComponent implements OnInit {
   loadGalleries() {
     this.dashboardService.getAllGalleries().subscribe((data: any[]) => {
       data.forEach((element: any) => {
-        let objectURL = 'data:image/png;base64,' + element.image;
-        // console.log(objectURL);
-
-        element.image = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-        // console.log(element.image);
+        let objectURL = 'data:image/jpeg;base64,' + element.image;
+        element.image = objectURL;
       });
 
       // console.log(this.galleries);
@@ -131,4 +128,32 @@ export class HomearComponent implements OnInit {
   hidePopup(index: number): void {
     this.isPopupVisible[index] = false;
   }
+
+
+  getGalleryImages(): string[] {
+    return [
+
+      '/assets/webpage/images/gallery/gallery-9.jpg',
+      '/assets/webpage/images/gallery/gallery-11.jpg',
+      '/assets/webpage/images/gallery/gallery-2.jpg',
+      '/assets/webpage/images/gallery/gallery-7.jpg',
+      '/assets/webpage/images/gallery/gallery-3.jpg',
+      '/assets/webpage/images/gallery/gallery-1.jpg',
+    ];
+  }
+
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1024px',
+      numVisible: 5
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 3
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1
+    }
+  ];
 }

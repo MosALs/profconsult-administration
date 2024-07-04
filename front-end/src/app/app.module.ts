@@ -25,6 +25,8 @@ import { EditPartnerComponent } from './components/partner/edit-partner/edit-par
 import { EditProjectComponent } from './components/project/edit-project/edit-project.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomearComponent } from './components/homear/homear.component';
+import {GalleriaModule} from 'primeng/galleria';
+
 
 
 
@@ -48,6 +50,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomearComponent
   ],
   imports: [
+    GalleriaModule,
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
