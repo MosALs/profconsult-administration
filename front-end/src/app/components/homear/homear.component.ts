@@ -129,7 +129,7 @@ export class HomearComponent implements OnInit {
     this.isPopupVisible[index] = false;
   }
 
-
+  getGalleryImages(): string[]
   getGalleryImages(): string[] {
     return [
 

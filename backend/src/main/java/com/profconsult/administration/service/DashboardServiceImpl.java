@@ -1,5 +1,6 @@
 package com.profconsult.administration.service;
 
+import com.profconsult.administration.config.ImageUtils;
 import com.profconsult.administration.dao.request.LinkObject;
 import com.profconsult.administration.entity.CompanyLinks;
 import com.profconsult.administration.entity.Gallery;
@@ -38,7 +39,7 @@ public class DashboardServiceImpl implements DashboardService{
                     .topicEn(topicEn)
                     .titleAr(titleAr)
                     .topicAr(topicAr)
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();
@@ -48,7 +49,7 @@ public class DashboardServiceImpl implements DashboardService{
                     .topicEn(topicEn)
                     .titleAr(titleAr)
                     .topicAr(topicAr)
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();
@@ -69,13 +70,13 @@ public class DashboardServiceImpl implements DashboardService{
         if(!id.equals(000)) {
             partner = Partner.builder()
                     .id(id)
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();
         } else {
             partner = Partner.builder()
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();
@@ -96,13 +97,13 @@ public class DashboardServiceImpl implements DashboardService{
         if(!id.equals(000)) {
             gallery = Gallery.builder()
                     .id(id)
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();
         } else {
             gallery = Gallery.builder()
-                    .image(file.getBytes())
+                    .image(ImageUtils.compressImage(file.getBytes()))
                     .fileName(fileName)
                     .fileType(file.getContentType())
                     .build();

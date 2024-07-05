@@ -6961,3 +6961,49 @@ position: fixed;
     margin-right: auto!important;
     margin-left: inherit!important;
 }
+
+.carousel-image {
+  width: 100%; /* Make the image take the full width of the column */
+  height: 400px; /* Set your desired height */
+  object-fit: cover; /* or object-fit: contain to fit the entire image inside the area */
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 1;
+}
+
+
+.Secthion-slider{
+    align-items: center;
+    justify-content: center;
+
+  }
+  @keyframes scroll {
+    0%{
+      transform: translate(calc(0));
+
+    }
+    100%{
+      transform: translate(calc(-250px * 7));
+    }
+    
+  }
+  .slider{
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .slider .slide-track{
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide{
+    height: 100px;
+    width: 250px;
+  }
