@@ -23,6 +23,7 @@ public class Project {
     private String titleAr;
     private String topicAr;
     @Lob
+    @Column(name = "image" , nullable = true , columnDefinition = "LONGBLOB")
     private byte[] image;
     private String fileName;
     private String fileType;
