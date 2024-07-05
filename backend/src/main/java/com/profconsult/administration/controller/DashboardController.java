@@ -135,6 +135,11 @@ public class DashboardController {
         return ResponseEntity.ok("done");
     }
 
+    @GetMapping(path = "/all-links")
+    public ResponseEntity<?> getAllLinks() {
+        return ResponseEntity.ok(dashboardService.getAllLinks());
+    }
+
     /**-------------------------------Generic for all types---------------------------------**/
     @DeleteMapping(path = "/delete/{id}/{key}")
     public ResponseEntity<?> deleteGallery(@PathVariable int id , @PathVariable String key ) {

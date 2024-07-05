@@ -24,4 +24,6 @@ public interface DashboardService {
 
 
     boolean deleteGallery(int id,  String key);
+
+    LinkObject getAllLinks();
 }

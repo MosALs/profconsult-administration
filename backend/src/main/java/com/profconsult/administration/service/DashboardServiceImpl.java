@@ -143,4 +143,16 @@ public class DashboardServiceImpl implements DashboardService{
         }
         return true;
     }
+
+    @Override
+    public LinkObject getAllLinks() {
+        CompanyLinks companyLinks = companyLinksRepository.findAll().get(0);
+        LinkObject linkObject = LinkObject.builder()
+                .twitterURL(companyLinks.getTwitterURL())
+                .facebookURL(companyLinks.getFacebookURL())
+                .linkedinURL(companyLinks.getLinkedinURL())
+                .instagramURL(companyLinks.getInstagramURL())
+                .build();
+        return linkObject;
+    }
 }

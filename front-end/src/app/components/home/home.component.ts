@@ -10,15 +10,21 @@ import { DashboardService } from 'src/app/services/dashboard.service';
 })
 export class HomeComponent implements OnInit {
 
- 
+
+  twiterLink: any;
+  facebookLink: any;
+  instagramLink: any;
+  linkedinLink: any;
+
   constructor(private translate: TranslateService, private dashboardService: DashboardService, private sanitizer: DomSanitizer) { }
 
 
   ngOnInit(): void {
-   
+
     this.loadProjects();
     this.loadGalleries();
     this.loadPartners();
+    this.loadCompanyLinks();
   }
 
   loadProjects() {
@@ -62,6 +68,15 @@ export class HomeComponent implements OnInit {
 
 
       this.partners = data;
+    })
+  }
+
+  loadCompanyLinks() {
+    this.dashboardService.getAllCompanyLinks().subscribe((data: any) => {
+      this.twiterLink = data.twitterURL;
+      this.facebookLink = data.facebookURL;
+      this.linkedinLink = data.linkedinURL;
+      this.instagramLink = data.instagramLink;
     })
   }
 

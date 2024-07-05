@@ -11,6 +11,12 @@ import { DashboardService } from 'src/app/services/dashboard.service';
 export class HomearComponent implements OnInit {
 
 
+  
+  twiterLink: any;
+  facebookLink: any;
+  instagramLink: any;
+  linkedinLink: any;
+  
   constructor(private translate: TranslateService, private dashboardService: DashboardService, private sanitizer: DomSanitizer) { }
 
 
@@ -19,6 +25,7 @@ export class HomearComponent implements OnInit {
     this.loadProjects();
     this.loadGalleries();
     this.loadPartners();
+    this.loadCompanyLinks();
   }
 
 
@@ -63,6 +70,15 @@ export class HomearComponent implements OnInit {
     })
   }
 
+
+  loadCompanyLinks() {
+    this.dashboardService.getAllCompanyLinks().subscribe((data: any) => {
+      this.twiterLink = data.twitterURL;
+      this.facebookLink = data.facebookURL;
+      this.linkedinLink = data.linkedinURL;
+      this.instagramLink = data.instagramLink;
+    })
+  }
 
 
   partners: any[] = [];

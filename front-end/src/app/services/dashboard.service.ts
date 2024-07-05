@@ -8,9 +8,10 @@ import { environment } from 'src/environment/environment';
   providedIn: 'root'
 })
 export class DashboardService {
-  
-  
-  
+
+
+
+
   constructor(private http: HttpClient) { }
 
   submitItem(itemObj: FormData): Observable<any> {
@@ -18,7 +19,7 @@ export class DashboardService {
     const uploadHeaders = new HttpHeaders();
     uploadHeaders.append('enctype', 'multipart/form-data');
 
-    const req = new HttpRequest('POST', environment.serverUrl+'api/v1/dashboard/item', itemObj, {
+    const req = new HttpRequest('POST', environment.serverUrl + 'api/v1/dashboard/item', itemObj, {
       reportProgress: true,
       responseType: 'text',
       headers: uploadHeaders
@@ -32,7 +33,7 @@ export class DashboardService {
     const uploadHeaders = new HttpHeaders();
     uploadHeaders.append('enctype', 'multipart/form-data');
 
-    const req = new HttpRequest('POST', environment.serverUrl+'api/v1/dashboard/partner', partnerObj, {
+    const req = new HttpRequest('POST', environment.serverUrl + 'api/v1/dashboard/partner', partnerObj, {
       reportProgress: true,
       responseType: 'text',
       headers: uploadHeaders
@@ -46,7 +47,7 @@ export class DashboardService {
     const uploadHeaders = new HttpHeaders();
     uploadHeaders.append('enctype', 'multipart/form-data');
 
-    const req = new HttpRequest('POST', environment.serverUrl+'api/v1/dashboard/gallery', galleryObj, {
+    const req = new HttpRequest('POST', environment.serverUrl + 'api/v1/dashboard/gallery', galleryObj, {
       reportProgress: true,
       responseType: 'text',
       headers: uploadHeaders
@@ -56,7 +57,7 @@ export class DashboardService {
   }
 
   submitLinks(payload: ComnpanyLinks) {
-    const req = new HttpRequest('POST', environment.serverUrl+'api/v1/dashboard/links', payload, {
+    const req = new HttpRequest('POST', environment.serverUrl + 'api/v1/dashboard/links', payload, {
       reportProgress: true,
       responseType: 'text'
     });
@@ -64,22 +65,25 @@ export class DashboardService {
   }
 
   getAllItems(): Observable<ItemObject[]> {
-    return this.http.get(environment.serverUrl+'api/v1/dashboard/all-items') as Observable<ItemObject[]>;
+    return this.http.get(environment.serverUrl + 'api/v1/dashboard/all-items') as Observable<ItemObject[]>;
   }
 
 
   getAllPartners(): Observable<Partner[]> {
-    return this.http.get(environment.serverUrl+'api/v1/dashboard/all-partners') as Observable<Partner[]>;
+    return this.http.get(environment.serverUrl + 'api/v1/dashboard/all-partners') as Observable<Partner[]>;
   }
 
-  getAllGalleries() : Observable<any[]> {
-    console.log('url= ',environment.serverUrl+'api/v1/dashboard/all-galleries' );
-    
-    return this.http.get(environment.serverUrl+'api/v1/dashboard/all-galleries') as Observable<Gallery[]>;
+  getAllGalleries(): Observable<any[]> {
+    // console.log('url= ',environment.serverUrl+'api/v1/dashboard/all-galleries' );
+
+    return this.http.get(environment.serverUrl + 'api/v1/dashboard/all-galleries') as Observable<Gallery[]>;
   }
 
-  deleteOne(id: any , key :string) {
-    return this.http.delete(environment.serverUrl+'api/v1/dashboard/delete/'+id+'/'+key) as Observable<boolean[]>;
+  getAllCompanyLinks() {
+    return this.http.get(environment.serverUrl + 'api/v1/dashboard/all-links') as Observable<ComnpanyLinks[]>;
+  }
+  deleteOne(id: any, key: string) {
+    return this.http.delete(environment.serverUrl + 'api/v1/dashboard/delete/' + id + '/' + key) as Observable<boolean[]>;
   }
 
 }
